@@ -48,8 +48,8 @@ let package = Package(
       .library(name: "RxSwift", targets: ["RxSwift"]),
       .library(name: "RxCocoa", targets: ["RxCocoa"]),
       .library(name: "RxRelay", targets: ["RxRelay"]),
-      .library(name: "RxBlocking", targets: ["RxBlocking"]),
-      .library(name: "RxTest", targets: ["RxTest"]),
+      .library(name: "RxBlocking", type: .dynamic, targets: ["RxBlocking"]),
+      .library(name: "RxTest", type: .dynamic, targets: ["RxTest"]),
     ],
     Product.allTests()
   ] as [[Product]]).flatMap { $0 },
